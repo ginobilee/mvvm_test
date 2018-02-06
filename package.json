@@ -1,0 +1,25 @@
+{
+  "name": "mvvm_test",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --open",
+    "build": "babel src/mvvm --out-dir lib/mvvm"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-decorators-legacy"
+    ]
+  },
+  "dependencies": {}
+}

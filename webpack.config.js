@@ -14,7 +14,7 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 module.exports = {
   entry: ['./src/index.js'], //演示单入口文件
   output: {
-    path: path.join(__dirname, 'build'), //打包输出的路径
+    path: path.join(__dirname, 'docs'), //打包输出的路径
     filename: 'index.js', //打包后的名字
     publicPath: path.join(__dirname, 'build') //html引用文件的路径，在这里是本地地址。
   },

@@ -14,9 +14,9 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
 module.exports = {
   entry: ['./src/index.js'], //演示单入口文件
   output: {
-    path: path.join(__dirname, 'out'), //打包输出的路径
+    path: path.join(__dirname, 'build'), //打包输出的路径
     filename: 'index.js', //打包后的名字
-    publicPath: path.join(__dirname, 'out') //html引用文件的路径，在这里是本地地址。
+    publicPath: path.join(__dirname, 'build') //html引用文件的路径，在这里是本地地址。
   },
   devtool: 'source-map',
   devServer: {
@@ -24,8 +24,8 @@ module.exports = {
     overlay: true,
     hot: true,
     inline: true,
-    contentBase: path.join(__dirname, 'out'),
-    publicPath: 'http://localhost:3000/out/'
+    contentBase: path.join(__dirname, 'build'),
+    publicPath: 'http://localhost:3000/build/'
   },
   module: {
     rules: [
@@ -44,9 +44,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['out/*.js']),
+    new CleanWebpackPlugin(['build/*.js']),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({ template: './out/index.html' })
+    new HtmlWebpackPlugin({ template: './build/index.html' })
   ]
 }

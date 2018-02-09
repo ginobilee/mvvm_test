@@ -6,10 +6,12 @@
     "babel-core": "^6.26.0",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
+    "eslint": "^4.17.0",
+    "eslint-plugin-react": "^7.6.1",
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --open",
+    "start": "webpack-dev-server --inline --hot",
     "build": "babel src/mvvm --out-dir lib/mvvm"
   },
   "prettier": {

@@ -1,10 +1,8 @@
-import MVVM from './mvvm/index.js'
-document.addEventListener(
+import MVVM from './mvvm'
+window.addEventListener(
   'load',
   function() {
-    console.log('index')
-    console.log('test')
-    var mvvm = new MVVM({
+    new MVVM({
       el: '#app',
       state: {
         test: 'test'
@@ -13,4 +11,4 @@ document.addEventListener(
   },
   false
 )
-console.log('index')
+console.log('begin in index')

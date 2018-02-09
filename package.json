@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
-    "build": "babel src/mvvm --out-dir lib/mvvm"
+    "build": "webpack"
   },
   "prettier": {
     "singleQuote": true,
